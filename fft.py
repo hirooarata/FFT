@@ -54,12 +54,12 @@ def dif_fft(flg: float, x: np.ndarray) -> np.ndarray:
 
 
 #
-def fft(self, x: np.ndarray):
+def fft(x: np.ndarray)->np.ndarray:
     x = self.dif_fft(-1, x)
     return x
 
 
-def ifft(self, x: np.ndarray):
+def ifft(x: np.ndarray)->np.ndarray:
     x = self.dif_fft(1, x)
     return x
 
