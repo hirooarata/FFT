@@ -13,8 +13,8 @@ def dif_fft(flg: float, x: np.ndarray) -> np.ndarray:
     #         by A.V.Oppenheim, R.W.Schafer, p.599
     #         prentice-hall,Englewood cliffs, New Jersey 07632
     #         ISBN 013216292X
-    #       --- flg= -1.0 .. regular FFT transform
-    #       ---    = +1.0 .. inverse FFT transform
+    #       --- flg= -1.0 .. regular FFT
+    #       ---    = +1.0 .. inverse FFT
     #       --- x[n] .. data (complex)
     n: int = len(x)
     nu: int = math.floor(math.log2(n))
