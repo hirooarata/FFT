@@ -1,5 +1,5 @@
 # FFT
-## FFT programs with Python
+## FFT programs with Python and C
 
 ## dif_fft (frequeny-inplace type)
 
