@@ -8,15 +8,27 @@ prentice-hall,Englewood cliffs, New Jersey 07632,ISBN 013216292X
 
 You can get a FFT program with FORTRAN in this book.
 
-## Usage
+## Usage(Python)
 
-dif_fft(flg,x)
+x = dif_fft(flg, x)
 
 flg= -1.0 .. regular FFT(From Time domain to Frequency domain)
 
 flg= +1.0 .. inverse FFT(From Frequency domain to Time domain)
 
 x[nn2]    .. complex ndarray
+
+## Usage(C)
+
+dif_fft(nn2, flg, x);
+
+nn2       .. size of array
+
+flg= -1.0 .. regular FFT(From Time domain to Frequency domain)
+
+flg= +1.0 .. inverse FFT(From Frequency domain to Time domain)
+
+x[nn2]    .. double complex array
 
 ## Sample
 
