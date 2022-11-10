@@ -1,6 +1,7 @@
 // fft.c
 // A program of FFT
 // version 1.0 2022/11/09 20:30 Python, OK;
+// version 2.0 2022/11/10 20:30 Python to C, OK;
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
