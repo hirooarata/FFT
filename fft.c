@@ -9,7 +9,7 @@
 
 void dif_fft(int n, double flg, double complex x[]){
     //      ver 1.0;
-    //       dif (_fft (frequeny-inplace type);
+    //       dif_fft (frequeny-inplace type);
     //         The algorithm of FFT is referred from  "Discrete-Time Signal Processing";
     //         by A.V.Oppenheim, R.W.Schafer, p.599;
     //         prentice-hall,Englewood clif (fs, New Jersey 07632;
@@ -35,6 +35,7 @@ void dif_fft(int n, double flg, double complex x[]){
             u = u * w;
             }
         }
+    
     int nv2 = n / 2; // bit reverse;
     for (int j=0, i=0;  i < (n - 1); ++i ){
         if ( i < j ){
@@ -49,6 +50,7 @@ void dif_fft(int n, double flg, double complex x[]){
             }
         j += k;
         }
+    
     if (flg >= 0.0){  // normalize for ifft
         for ( int i = 0; i < n; ++i ){
             x[i] /=(double)n;
