@@ -26,7 +26,7 @@ flg= +1.0 .. inverse FFT(From Frequency domain to Time domain)
 
 x[nn2]    .. complex ndarray
 
-## Usage(C_complex)
+## Usage(Complex number C)
 
 dif_fft(nn2, flg, x);
 
@@ -37,6 +37,20 @@ flg= -1.0 .. regular FFT(From Time domain to Frequency domain)
 flg= +1.0 .. inverse FFT(From Frequency domain to Time domain)
 
 x[nn2]    .. double complex array
+
+## Usage(Classic C)
+
+dif_fft_float(nn2, flg, xr, xi);
+
+nn2       .. size of array
+
+flg= -1.0 .. regular FFT(From Time domain to Frequency domain)
+
+flg= +1.0 .. inverse FFT(From Frequency domain to Time domain)
+
+xr[nn2]    .. float array(real part)
+
+xi[nn2]    .. float array(imaginary part)
 
 ## Sample
 
