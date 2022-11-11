@@ -16,7 +16,7 @@ void dif_fft_float(int n, float flg, float * xr, float * xi) {
            dif_fft (frequeny-inplace type)                                 
              The algorithm of FFT is referred from  "Discrete-Time Signal Processing"
              by A.V.Oppenheim, R.W.Schafer, p.599                            
-             prentice-hall,Englewood clif (fs, New Jersey 07632              
+             prentice-hall,Englewood cliffs, New Jersey 07632              
              ISBN 013216292X                                                 
           --- FLG= -1.0 .. REGULAR FFT TRANSFORM                              
           ---    = +1.0 .. INVERSE FFT TRANSFORM                              
