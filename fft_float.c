@@ -12,17 +12,17 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 */
 /*------------------------------------------------------------------------------*/
 void dif_fft_float(int n, float flg, float * xr, float * xi) {
-    /*     VER 1.0                                                              */
-    /*       dif (_fft (frequeny-inplace type);                                 */
-    /*         The algorithm of FFT is referred from  "Discrete-Time Signal Processing";*/
-    /*         by A.V.Oppenheim, R.W.Schafer, p.599;                            */
-    /*         prentice-hall,Englewood clif (fs, New Jersey 07632;              */
-    /*         ISBN 013216292X;                                                 */
-    /*      --- FLG= -1.0 .. REGULAR FFT TRANSFORM                              */
-    /*      ---    = +1.0 .. INVERSE FFT TRANSFORM                              */
-    /*      --- xr .. DATA (REAL PART)                                          */
-    /*      --- xi .. DATA (IMAG PART)                                          */
-
+    /*     VER 1.0
+           dif_fft (frequeny-inplace type)                                 
+             The algorithm of FFT is referred from  "Discrete-Time Signal Processing"
+             by A.V.Oppenheim, R.W.Schafer, p.599                            
+             prentice-hall,Englewood clif (fs, New Jersey 07632              
+             ISBN 013216292X                                                 
+          --- FLG= -1.0 .. REGULAR FFT TRANSFORM                              
+          ---    = +1.0 .. INVERSE FFT TRANSFORM                              
+          --- xr .. DATA ARRAY(REAL PART)                                          
+          --- xi .. DATA ARRAY(IMAG PART)
+    */
     const float pi = 3.1415926535897932384626433832795029;
     int le, le1, k, nu, nv2, i, j, ll, ip;
     float xrp, xip, xrm, xim, ur, ui, wr, wi, tr, ti;
