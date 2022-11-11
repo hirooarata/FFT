@@ -26,7 +26,7 @@ void dif_fft(int n, double flg, double complex x[]){
     //       --- flg= -1.0 .. regular FFT;
     //       ---    = +1.0 .. inverse FFT;
     //       --- x[n] .. data (complex);
-    int nu = (floor)(log2((double)n));
+    int nu = (int)(log2((double)n));
     // printf("dif_fft:n=%d, nu=log2(n)=%d", n, nu);
     double pi= 3.1415926535897932384626433832795029;
     for ( int ll=0; ll < nu; ++ll ){ // butterfly;
