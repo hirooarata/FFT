@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 /*------------------------------------------------------------------------------*/
 void dif_fft_float(int n, float flg, float * xr, float * xi) {
     /*     VER 1.0
-           dif_fft (frequeny-inplace type)                                 
+           dif_fft_float (frequeny-inplace type) 
              The algorithm of FFT is referred from  "Discrete-Time Signal Processing"
              by A.V.Oppenheim, R.W.Schafer, p.599                            
              prentice-hall,Englewood cliffs, New Jersey 07632              
