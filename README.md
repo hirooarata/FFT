@@ -9,6 +9,16 @@ prentice-hall,Englewood cliffs, New Jersey 07632,ISBN 013216292X
 
 You can get a FFT program with FORTRAN in this book.
 
+## Usage(Ruby)
+
+x = dif_fft(flg, x)
+
+flg= -1.0 .. regular FFT(From Time domain to Frequency domain)
+
+flg= +1.0 .. inverse FFT(From Frequency domain to Time domain)
+
+x[nn2]    .. complex vector
+
 ## Usage(Python)
 
 x = dif_fft(flg, x)
