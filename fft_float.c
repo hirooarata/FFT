@@ -10,6 +10,7 @@ void dif_fft_float(int n, float flg, float * xr, float * xi) {
     /*         by A.V.Oppenheim, R.W.Schafer, p.599;                            */
     /*         prentice-hall,Englewood clif (fs, New Jersey 07632;              */
     /*         ISBN 013216292X;                                                 */
+    /*         Translated from FORTRAN to C language                            */
     /*      --- FLG= -1.0 .. REGULAR FFT TRANSFORM                              */
     /*      ---    = +1.0 .. INVERSE FFT TRANSFORM                              */
     /*      --- xr .. DATA (REAL PART)                                          */
