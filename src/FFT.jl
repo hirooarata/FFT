@@ -1,6 +1,6 @@
 #----------------------------------------------------
 # FFTパッケージ構造体
-module FFT
+module FFTC
     # dif_fft関数
     function dif_fft(flg::Float64, x::Vector{Complex{T}}) where T
         n = length(x)
