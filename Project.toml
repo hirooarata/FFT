@@ -1,4 +1,4 @@
-name = "FFT"
+name = "FFTC"
 uuid = "3b775bc8-a01b-4af2-bd56-6676f32ee4ab"
 authors = ["hirooarata <39842416+hirooarata@users.noreply.github.com>"]
 version = "0.1.0"
