@@ -1,5 +1,5 @@
 #----------------------------------------------------
-# Transcode from Python to Julia. under construction.
+# 🚧 Under construction.　Transcode from Python to Julia. 
 #----------------------------------------------------
 module FFTC
     # dif_fft function
