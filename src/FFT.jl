@@ -1,7 +1,8 @@
 #----------------------------------------------------
-# FFTパッケージ構造体
+# Transcode from Python to Julia. under construction.
+#----------------------------------------------------
 module FFTC
-    # dif_fft関数
+    # dif_fft function
     function dif_fft(flg::Float64, x::Vector{Complex{T}}) where T
         n = length(x)
         nu = floor(Int, log2(n))
@@ -44,19 +45,19 @@ module FFTC
         return x
     end
     #------------------------------------------------
-    # fft関数
+    # fft function
     function fft(x::Vector{Complex{T}}) where T
         x = dif_fft(-1.0, x)
         return x
     end
     #------------------------------------------------
-    # ifft関数
+    # ifft function
     function ifft(x::Vector{Complex{T}}) where T
         x = dif_fft(1.0, x)
         return x
     end
     #------------------------------------------------
-    # fft_shift関数
+    # fft_shift function
     function fft_shift(x::Vector{Complex{T}}) where T
         nn2 = length(x)
         c = div(nn2, 2)
@@ -75,7 +76,7 @@ module FFTC
         return x
     end
     #------------------------------------------------
-    # ifft_shift関数
+    # ifft_shift function
     function ifft_shift(x::Vector{Complex{T}}) where T
         nn2 = length(x)
         nn = div(nn2, 2)
@@ -95,7 +96,7 @@ module FFTC
         return x
     end
     #------------------------------------------------
-    # fft_checking関数
+    # fft_checking function
     function fft_checking(nn2::Int)
         x = zeros(Complex{T}, nn2)
         y = zeros(Complex{T}, nn2)
