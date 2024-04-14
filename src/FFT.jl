@@ -1,20 +1,22 @@
 #-------------------------------------------------
-#           🚧 Under construction 🚧
 # Transcode from Python to Julia.
 #-------------------------------------------------
 module FFT
 #-------------------------------------------------
-export dif_fft,fft,ifft,fft_shift,ifft_shift,fft_checking,test_FFT
+export dif_fft,fft,ifft,fft_shift,ifft_shift
+export fft_checking,test_FFT
+#-------------------------------------------------
 function dif_fft(flg::Float64, x::Vector{Complex{T}}) where T
     n = length(x)
     nu = floor(Int, log2(n))
     # butterfly
-    for nm in 0:nu-1
-        le = 2^(nu - nm)
+    for nm in 1:nu
+        le = 2 ^ (nu - nm +1 )
         le1 = le ÷ 2
+        println("le=",le,", le1=",le1)
         u = 1 + 1im * 0
         w = cos(pi / le1) + 1im * sin(flg * pi / le1)
-        for j in 0:le1-1
+        for j in 1:le1
             for i in j:le:n-1
                 ip = i + le1
                 xp = x[i] + x[ip]
@@ -27,7 +29,7 @@ function dif_fft(flg::Float64, x::Vector{Complex{T}}) where T
     # bit reverse
     nv2 = n ÷ 2
     j = 0
-    for i in 0:n-2
+    for i in 1:n-1
         if i < j
             x[j], x[i] = x[i], x[j]
         end
@@ -98,6 +100,8 @@ function ifft_shift(x::Vector{Complex{T}}) where T
     return x
 end
 #-------------------------------------------------
+norm(x)=sqrt(sum(abs2, x))
+#-------------------------------------------------
 function test_FFT()
     nn2=4
     T=Float64
@@ -109,14 +113,13 @@ function test_FFT()
     y = FFT.dif_fft(-1.0, x)
     z = FFT.dif_fft(1.0, y)
     println("\n\nup/down:loopback_error=", norm(z - x0))
-    x= SG.norm(FFT.test_FFT(nn2,T)-[1,0,0,0]) < 1e-4
-    println("test FFT.test_FFT=", x)
-    return x
+    l=  norm(z - x0) < 1e-4
+    println("test FFT.test_FFT = ", l)
+    return l
 end
 #-------------------------------------------------
 end # module FFT
 #-------------------------------------------------
 if abspath(PROGRAM_FILE) == @__FILE__
-    println("Julia in FFT")
     FFT.test_FFT()
 end
