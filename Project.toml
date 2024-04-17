@@ -1,4 +1,13 @@
-name = "FFTC"
-uuid = "3b775bc8-a01b-4af2-bd56-6676f32ee4ab"
-authors = ["hirooarata <39842416+hirooarata@users.noreply.github.com>"]
-version = "0.1.0"
+name = "FFT"
+uuid = "88b3258b-2488-4a5a-b6c7-a04a9b0d79c9"
+authors = ["hirooarata <39842416+hirooarata@users.noreply.github.com> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.10.2"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
