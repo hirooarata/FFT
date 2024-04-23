@@ -3,10 +3,10 @@
 #-------------------------------------------------
 module FFT
 #-------------------------------------------------
-export dif_fft,fft,ifft,fft_shift,ifft_shift
-export fft_checking,test_FFT
+export dif_fft,dif_ifft,fft_shift,ifft_shift
+export test_FFT
 #-------------------------------------------------
-function dif_fft(flg::Float64, x::Vector{Complex{T}}) where T
+function fftc!(flg, x)
     n = length(x)
     nu = floor(Int, log2(n))
     # butterfly
@@ -50,19 +50,19 @@ function dif_fft(flg::Float64, x::Vector{Complex{T}}) where T
 end
 #-------------------------------------------------
 # fft function
-function fft(x::Vector{Complex{T}}) where T
-    x = dif_fft(-1.0, x)
+function dif_fft(x)
+    x = fftc!(-1.0, x)
     return x
 end
 #-------------------------------------------------
 # ifft function
-function ifft(x::Vector{Complex{T}}) where T
-    x = dif_fft(1.0, x)
+function dif_ifft(x)
+    x = fftc!(1.0, x)
     return x
 end
 #-------------------------------------------------
 # fft_shift function
-function fft_shift(x::Vector{Complex{T}}) where T
+function fft_shift(x)
     nn2 = length(x)
     c = div(nn2, 2)
     if c % 2 == 0
@@ -81,7 +81,7 @@ function fft_shift(x::Vector{Complex{T}}) where T
 end
 #-------------------------------------------------
 # ifft_shift function
-function ifft_shift(x::Vector{Complex{T}}) where T
+function ifft_shift(x)
     nn2 = length(x)
     nn = div(nn2, 2)
     if nn2 % 2 == 0
