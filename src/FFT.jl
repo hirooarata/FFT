@@ -1,12 +1,12 @@
 #-------------------------------------------------
 # Transcode from Python to Julia.
 #-------------------------------------------------
-module FFT
+module FFTD
 #-------------------------------------------------
 export dif_fft,dif_ifft,fft_shift,ifft_shift
 export test_FFT
 #-------------------------------------------------
-function fftc!(flg, x)
+function fftd!(flg, x)
     n = length(x)
     nu = floor(Int, log2(n))
     # butterfly
@@ -51,13 +51,13 @@ end
 #-------------------------------------------------
 # fft function
 function dif_fft(x)
-    x = fftc!(-1.0, x)
+    x = fftd!(-1.0, x)
     return x
 end
 #-------------------------------------------------
 # ifft function
 function dif_ifft(x)
-    x = fftc!(1.0, x)
+    x = fftd!(1.0, x)
     return x
 end
 #-------------------------------------------------
