@@ -4,7 +4,7 @@
 module FFTD
 #-------------------------------------------------
 export dif_fft,dif_ifft,fft_shift,ifft_shift
-export test_FFT
+export test_FFTD
 #-------------------------------------------------
 function fftd!(flg, x)
     n = length(x)
